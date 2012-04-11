@@ -11,8 +11,9 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 		pinHeaders: true,
 		layout:{
 			type: 'vbox',
-			align:'middle'
+			align:'middle',
 		},
+		
 
 		items: [{
 			xtype: 'fieldset',
@@ -22,24 +23,28 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 				xtype: 'textfield',
 				label: 'First Name',
 				name: 'firstName',
+				id: 'firstnamec',
 				required: true
 			},
 			{
 				xtype: 'textfield',
 				label: 'Last Name',
 				name: 'lastName',
+				id: 'lastnamec',
 				required: true
 			},
 			{
 				xtype: 'textfield',
 				label: 'Father/Husband First Name',
 				name: 'guardianFirstName',
+				id: 'guardianfirstnamec',
 				required: true
 			},
 			{
 				xtype: 'textfield',
 				label: 'Father/Husband Last Name:',
 				name: 'guardianLastName',
+				id: 'guardianlastnamec',
 				required: true,
 				clearIcon: true
 			},
@@ -47,6 +52,7 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 				xtype: 'selectfield',
 				label: 'Sex',
 				name: 'gender',
+				id: 'genderc',
 				options: [{
 					text: 'Male',
 					value: 'male'
@@ -64,6 +70,7 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 				xtype: 'selectfield',
 				label: 'Education',
 				name: 'education',
+				id: 'educationc',
 				options: [{
 					text: 'Not educated',
 					value: 'notEducated'
@@ -89,6 +96,7 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 				xtype: 'datepickerfield',
 				label: 'Date of Birth:',
 				name: 'dateOfBirth',
+				id: 'dobc',
 				value: new Date(),
 				picker: {
 					yearFrom: 1930
@@ -100,6 +108,7 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 				name: 'caste',
 				label: 'Caste',
 				placeHolder: 'Select Caste',
+				id: 'castec',
 				displayField: 'desc',
 				options: [{
 					desc: 'First',
@@ -126,42 +135,49 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 				xtype: 'textfield',
 				label: 'Block/House/Door #',
 				name: 'block#',
+				id: 'blockc',
 				required: true
 			},
 			{
 				xtype: 'textfield',
 				label: 'Street/Area/Locality/Mohalla/Road',
 				name: 'street',
+				id: 'streetc',
 				required: true
 			},
 			{
 				xtype: 'textfield',
 				label: 'Town/Village/City',
 				name: 'town',
+				id: 'townc',
 				required: true
 			},
 			{
 				xtype: 'textfield',
 				label: 'Post Office',
 				name: 'postOffice',
+				id: 'postofficec',
 				required: false
 			},
 			{
 				xtype: 'textfield',
 				label: 'Tehsil/Taluka/Mandal/Thana',
 				name: 'tehsil',
+				id: 'tehsilc',
 				required: false
 			},
 			{
 				xtype: 'textfield',
 				label: 'District',
 				name: 'district',
+				id: 'districtc',
 				required: false
 			},
 			{
 				xtype: 'selectfield',
 				label: 'Contact me via phone',
 				name: 'contactViaPhone',
+				id: 'contactviaphonec',
 				options: [{
 					text: 'Yes',
 					value: 'yes'
@@ -174,17 +190,20 @@ Ext.define('RaxaEmr.Registration.view.Register', {
 			{
 				xtype: 'textfield',
 				label: 'Primary Phone',
-				name: 'primaryPhone'
+				name: 'primaryPhone',
+				id: 'primaryphonec'
 			},
 			{
 				xtype: 'textfield',
 				label: 'Secondary Phone',
-				name: 'secondaryPhone'
+				name: 'secondaryPhone',
+				id: 'secondaryphonec'
 			},
 			{
 				xtype: 'button',
 				text: 'Create Patient',
 				action: 'createPatient'
+				
 			}]
 		}]
 	}
